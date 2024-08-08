@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Association displaying in real time the best movies sorted by their imdb scores !">
+    <title>JustStreamIt</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <!-- Custom font used: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="page_bloc">
+        <!-- Main title, Logo + Navigation bar -->
+        <nav class="nav_bar">
+            <div class="nav_title">
+                <h1>JustStreamIt</h1>
+            </div>
+            <ul class="nav_tabs">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+            </ul>
+        </nav>
+
+        <!-- Best movie -->
+        <h1 class="best_movie_title">Best Movie</h1>
+        <div class="best_movie_container">
+            <div class="best_movie_image"></div>
+            <div class="best_movie_description">
+                <h2>Movie title</h2>
+                <button><span>Play</span></button>
+                <p>Description</p>
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="categories">
+            <!-- Carousels -->
+            <div class="carrousel">
+                <h1 class="top_rated_title">Top rated movies</h1>
+                <button class="carrousel_button carrousel_button-left button_best_left" aria-label="Previous slide">
+                    &lsaquo;
+                </button>
+                <div class="carrousel_container top-rated"></div>
+                <button class="carrousel_button carrousel_button-right button_best_right" aria-label="Next slide">
+                    &rsaquo;
+                </button>
+            </div>
+            <!-- Other category carousels -->
+            <!-- Animation -->
+            <div class="carrousel">
+                <h1 class="anime_title">Animation</h1>
+                <button class="carrousel_button carrousel_button-left button_anime_left" aria-label="Previous slide">
+                    &lsaquo;
+                </button>
+                <div class="carrousel_container anime"></div>
+                <button class="carrousel_button carrousel_button-right button_anime_right" aria-label="Next slide">
+                    &rsaquo;
+                </button>
+            </div>
+            <!-- Horror -->
+            <div class="carrousel">
+                <h1>Horror</h1>
+                <button class="carrousel_button carrousel_button-left button_horror_left" aria-label="Previous slide">
+                    &lsaquo;
+                </button>
+                <div class="carrousel_container horror"></div>
+                <button class="carrousel_button carrousel_button-right button_horror_right" aria-label="Next slide">
+                    &rsaquo;
+                </button>
+            </div>
+            <!-- Musical -->
+            <div class="carrousel">
+                <h1>Musical</h1>
+                <button class="carrousel_button carrousel_button-left button_musical_left" aria-label="Previous slide">
+                    &lsaquo;
+                </button>
+                <div class="carrousel_container musical"></div>
+                <button class="carrousel_button carrousel_button-right button_musical_right" aria-label="Next slide">
+                    &rsaquo;
+                </button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal">
+                <div class="modal_content">
+                    <div class="modal_header">
+                        <span class="close_button">&times;</span>
+                        <h2>Movie Title</h2>
+                        <p>Published : </p>
+                        <span>Duration :</span>
+                    </div>
+                    <div class="modal_body">
+                        <img class="modal_image" src="">
+                        <p class="modal_description"><span>Description :</span><br></p>
+                    </div>
+                    <div class="modal_footer">
+                        <p>Rated</p>
+                        <p>Imdb score</p>
+                        <p>Directors</p>
+                        <p>Actors</p>
+                        <p>Countries</p>
+                        <p>Box Office</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src='scripts/carrousel.js'></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+/* Main page elements */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../image/wallpaper4.jpg");
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    height: 100vh;
+    color: black;
+}
+
+#page_bloc {
+    width: 80rem;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+/* Navigation bar */
+.nav_bar {
+    background: url("../image/logo-image-medium.png") no-repeat;
+    background-position: center center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    padding: 50px 71px;
+}
+
+.nav_tabs {
+    list-style: none;
+}
+
+.nav_tabs li {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+.nav_tabs li a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Best movie */
+.best_movie_title {
+    margin-left: -10px;
+    margin-top: 20px;
+    color: black;
+    text-align: center;
+    justify-content: center;
+}
+
+.best_movie_container {
+    margin-top: -20px;
+    display: flex;
+    max-width: 71%;
+    margin-left: 210px;
+}
+
+.best_movie_description {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.best_movie_description button {
+    background-color: darkslateblue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.best_movie_description button span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.best_movie_description button span:after {
+    content: '\25BA';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.best_movie_description button:hover span {
+    padding-right: 25px;
+}
+
+.best_movie_description button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.best_movie_image img {
+    max-width: 100%;
+    transition: 0.3s all ease-out;
+}
+
+.best_movie_image img:hover {
+    transform: scale(0.9);
+}
+
+.best_movie_container > div {
+    flex-basis: 21rem;
+}
+
+/* Every category */
+.categories h1 {
+    text-align: center;
+    color: black;
+}
+
+.categories .liste {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    overflow: hidden;
+}
+
+/* Carrousel */
+.carrousel {
+    position: relative;
+    width: 71%;
+    margin: 0 auto;
+}
+
+.carrousel_container {
+    height: auto;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.carrousel_container > img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s all ease-out;
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+}
+
+.carrousel_container > img:hover {
+    transform: scale(0.9);
+}
+
+.carrousel_slide {
+    display: flex;
+    top: 0;
+    bottom: 0;
+}
+
+.carrousel_button {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    top: 45%;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 70px;
+    color: black;
+    transition: 0.3s all ease-out;
+}
+
+.carrousel_button:hover {
+    transform: scale(1.2);
+}
+
+.carrousel_button-left {
+    left: -35px;
+}
+
+.carrousel_button-right {
+    right: -35px;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_content {
+    background-color: #f4f4f4;
+    margin: 10% auto;
+    width: 55%;
+    height: auto;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: 0.8s;
+}
+
+.modal_header {
+    display: block;
+    background: lavender;
+    padding: 20px;
+}
+
+.modal_header h2,
+.modal_footer h3 {
+    margin: 0;
+}
+
+.modal_body {
+    display: flex;
+}
+
+.modal_body > * {
+    display: block;
+}
+
+.modal_content.modal_body {
+    padding: 10px 20px;
+}
+
+.modal_image {
+    padding: 20px;
+}
+
+.modal_description {
+    padding-right: 20px;
+    padding-top: 5px;
+    font-size: 14px;
+}
+
+.modal.modal_content.modal_body.modal_description {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.modal_content.modal_description {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    height: auto;
+    justify-content: right;
+}
+
+.modal_footer {
+    background: lavender;
+    ;
+    display: grid;
+    height: 100px;
+    grid-template-columns: 200px 200px 200px;
+    grid-row: auto;
+    grid-column-gap: 80px;
+    grid-row-gap: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_footer p {
+    width: auto;
+    height: auto;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close_button {
+    color: dimgray;
+    float: right;
+    font-size: 50px;
+}
+
+.close_button:hover,
+.close_button:focus {
+    color: #000;
+    text-decoration: none
+}
+
+@keyframes modalopen {
+    from{opacity: 0}
+    to {opacity: 1}
+}
