@@ -2,8 +2,10 @@
 const moviesApi = "http://localhost:8000/api/v1/titles/?imdb_score_min=8.3&page_size=100&sort_by=-imdb_score";
 
 // Éléments de la fenêtre popup :
+// Récupération de la fenêtre modale et du bouton de fermeture
 let modal = document.getElementsByClassName("modal")[0];
 let closeModalButton = document.getElementsByClassName("close_button")[0];
+// Récupération des éléments spécifiques de la modale
 let modalElements = {
     title: modal.getElementsByTagName("h2")[0],
     description: modal.getElementsByClassName("modal_description")[0],

@@ -42,8 +42,9 @@ Fonction pour récupérer les données des films et les afficher dans les carrou
 @param : {object} movies - Éléments des films, comprenant l'URL et le conteneur du carrousel.
 */
 const fetchMovies = async (movies) => {
-    // Fetch des données des films depuis l'API.
+    // Fetch des données des films depuis l'API. ( requete)
     movies["details"] = await fetch(movies["url"])
+        // reponse en json
         .then(response => response.json());
 
     // Séparer le meilleur film du reste (uniquement pour les films les mieux notés).
@@ -53,11 +54,18 @@ const fetchMovies = async (movies) => {
 
     // Création dynamique des images dans le carrousel de chaque catégorie de films.
     for (let i = 0; i < 7; i++) {
+        //Crée un nouvel élément d'image <img>.
         let newImage = document.createElement("img");
+        // Définit l'URL de l'image pour chaque film à partir des données récupérées.
         newImage.src = movies["details"].results[i].image_url;
+        // Attribue l'ID du film à l'image, ce qui peut être utilisé plus tard pour d'autres interactions.
         newImage.id = movies["details"].results[i].id;
+        // Ajoute cette nouvelle image au carrousel dans le DOM.
         movies["carrousel"].appendChild(newImage);
+        // Gestion des événements
+        // ouvre une fenêtre modale qui affiche plus d'informations sur le film.
         newImage.addEventListener("click", () => openModal(newImage.id));
+        // Ajoute un gestionnaire pour fermer la fenêtre modale lorsque l'utilisateur clique sur le bouton de fermeture.
         closeModalButton.addEventListener("click", closeModal);
     }
 };
