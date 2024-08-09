@@ -1,4 +1,4 @@
-/* Main page elements */
+/* Éléments de la page principale */
 * {
     box-sizing: border-box;
 }
@@ -17,7 +17,7 @@ body {
     padding-bottom: 60px;
 }
 
-/* Navigation bar */
+/* Barre de navigation */
 .nav_bar {
     background: url("../image/logo-image-medium.png") no-repeat;
     background-position: center center;
@@ -47,7 +47,7 @@ body {
     text-decoration: none;
 }
 
-/* Best movie */
+/* Meilleur film */
 .best_movie_title {
     margin-left: -10px;
     margin-top: 20px;
@@ -119,7 +119,7 @@ body {
     flex-basis: 21rem;
 }
 
-/* Every category */
+/* Chaque catégorie */
 .categories h1 {
     text-align: center;
     color: black;
@@ -194,7 +194,7 @@ body {
     right: -35px;
 }
 
-/* Modals */
+/* Popup */
 .modal {
     display: none;
     position: fixed;

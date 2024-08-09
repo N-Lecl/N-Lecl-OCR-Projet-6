@@ -1,7 +1,7 @@
-// API Url for each movie, sorted by at least 8.3 minimum IMDb score.
+// URL de l'API pour récupérer les films, triés par un score IMDb minimum de 8.3.
 const moviesApi = "http://localhost:8000/api/v1/titles/?imdb_score_min=8.3&page_size=100&sort_by=-imdb_score";
 
-// Modal elements:
+// Éléments de la fenêtre modale (popup) :
 let modal = document.getElementsByClassName("modal")[0];
 let closeModalButton = document.getElementsByClassName("close_button")[0];
 let modalElements = {
@@ -18,7 +18,9 @@ let modalElements = {
     boxOffice: modal.getElementsByClassName("modal_footer").item(0).getElementsByTagName("p")[5]
 };
 
-// Each movie category:
+// Chaque catégorie de film :
+
+// Meilleur film (film avec un score IMDb de 9.6 ou plus)
 let bestMovie = {
     url: moviesApi.replace("imdb_score_min=8.3", "imdb_score_min=9.6"),
     image: document.getElementsByClassName("best_movie_image").item(0),
@@ -27,21 +29,25 @@ let bestMovie = {
     button: document.getElementsByClassName("best_movie_description").item(0).getElementsByTagName("button")[0]
 };
 
+// Films les mieux notés (avec un score IMDb de 9.3 ou plus)
 let topRatedMovies = {
     url: moviesApi.replace("imdb_score_min=8.3", "imdb_score_min=9.3"),
     carrousel: document.getElementsByClassName("carrousel_container top-rated").item(0)
 };
 
+// Films d'animation (avec un score IMDb de 8.3 ou plus)
 let animeMovies = {
     url: `${moviesApi}&genre=Animation`,
     carrousel: document.getElementsByClassName("carrousel_container anime").item(0)
 };
 
+// Films d'horreur (avec un score IMDb de 8.3 ou plus)
 let horrorMovies = {
     url: `${moviesApi}&genre=Horror`,
     carrousel: document.getElementsByClassName("carrousel_container horror").item(0)
 };
 
+// Films musicaux (avec un score IMDb de 8.3 ou plus)
 let musicalMovies = {
     url: `${moviesApi}&genre=Musical`,
     carrousel: document.getElementsByClassName("carrousel_container musical").item(0)

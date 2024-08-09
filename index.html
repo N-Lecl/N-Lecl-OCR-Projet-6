@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="description" content="Association displaying in real time the best movies sorted by their imdb scores !">
     <title>JustStreamIt</title>
+    <!-- Lien vers le fichier CSS principal -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-    <!-- Custom font used: Montserrat -->
+    <!-- Police personnalisée utilisée : Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap"
@@ -15,7 +16,7 @@
 
 <body>
     <div id="page_bloc">
-        <!-- Main title, Logo + Navigation bar -->
+        <!-- Titre principal, Logo + Barre de navigation -->
         <nav class="nav_bar">
             <div class="nav_title">
                 <h1>JustStreamIt</h1>
@@ -26,7 +27,7 @@
             </ul>
         </nav>
 
-        <!-- Best movie -->
+        <!-- Section Meilleur film -->
         <h1 class="best_movie_title">Best Movie</h1>
         <div class="best_movie_container">
             <div class="best_movie_image"></div>
@@ -37,21 +38,23 @@
             </div>
         </div>
 
-        <!-- Categories -->
+        <!-- Section des catégories de films -->
         <div class="categories">
-            <!-- Carousels -->
+            <!-- Carrousel des films les mieux notés -->
             <div class="carrousel">
                 <h1 class="top_rated_title">Top rated movies</h1>
+                <!-- Bouton pour faire défiler à gauche -->
                 <button class="carrousel_button carrousel_button-left button_best_left" aria-label="Previous slide">
                     &lsaquo;
                 </button>
                 <div class="carrousel_container top-rated"></div>
+                <!-- Bouton pour faire défiler à droite -->
                 <button class="carrousel_button carrousel_button-right button_best_right" aria-label="Next slide">
                     &rsaquo;
                 </button>
             </div>
-            <!-- Other category carousels -->
-            <!-- Animation -->
+            <!-- Autres carrousels de catégories spécifiques -->
+            <!-- Carrousel des films d'animation -->
             <div class="carrousel">
                 <h1 class="anime_title">Animation</h1>
                 <button class="carrousel_button carrousel_button-left button_anime_left" aria-label="Previous slide">
@@ -62,7 +65,7 @@
                     &rsaquo;
                 </button>
             </div>
-            <!-- Horror -->
+            <!-- Carrousel des films d'horreur -->
             <div class="carrousel">
                 <h1>Horror</h1>
                 <button class="carrousel_button carrousel_button-left button_horror_left" aria-label="Previous slide">
@@ -73,7 +76,7 @@
                     &rsaquo;
                 </button>
             </div>
-            <!-- Musical -->
+            <!-- Carrousel des films musicaux -->
             <div class="carrousel">
                 <h1>Musical</h1>
                 <button class="carrousel_button carrousel_button-left button_musical_left" aria-label="Previous slide">
@@ -85,20 +88,23 @@
                 </button>
             </div>
 
-            <!-- Modal -->
+            <!-- Fenêtre modale pour afficher les détails d'un film -->
             <div class="modal">
                 <div class="modal_content">
                     <div class="modal_header">
+                        <!-- Bouton pour fermer la fenêtre modale -->
                         <span class="close_button">&times;</span>
                         <h2>Movie Title</h2>
                         <p>Published : </p>
                         <span>Duration :</span>
                     </div>
                     <div class="modal_body">
+                        <!-- Image de présentation du film -->
                         <img class="modal_image" src="">
                         <p class="modal_description"><span>Description :</span><br></p>
                     </div>
                     <div class="modal_footer">
+                        <!-- Informations supplémentaires sur le film -->
                         <p>Rated</p>
                         <p>Imdb score</p>
                         <p>Directors</p>
