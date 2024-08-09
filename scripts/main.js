@@ -63,9 +63,9 @@ const fetchMovies = async (movies) => {
 };
 
 /*
-Fonction pour ouvrir la fenêtre modale avec les détails du film sélectionné.
+Fonction pour ouvrir la fenêtre popup avec les détails du film sélectionné.
 
-@param : {string} id - ID du film pour récupérer ses détails et les afficher dans la modale.
+@param : {string} id - ID du film pour récupérer ses détails et les afficher dans la popup.
 */
 const openModal = async (id) => {
     let movieDetails = await fetch("http://localhost:8000/api/v1/titles/" + id)

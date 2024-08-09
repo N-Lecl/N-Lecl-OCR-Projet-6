@@ -1,7 +1,7 @@
 // URL de l'API pour récupérer les films, triés par un score IMDb minimum de 8.3.
 const moviesApi = "http://localhost:8000/api/v1/titles/?imdb_score_min=8.3&page_size=100&sort_by=-imdb_score";
 
-// Éléments de la fenêtre modale (popup) :
+// Éléments de la fenêtre popup :
 let modal = document.getElementsByClassName("modal")[0];
 let closeModalButton = document.getElementsByClassName("close_button")[0];
 let modalElements = {
